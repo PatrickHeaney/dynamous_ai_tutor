@@ -1,9 +1,3 @@
 pydantic-ai
-fastapi
-uvicorn
-streamlit
-supabase
 python-dotenv
-pytest
-black
-ruff
+openai

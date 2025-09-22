@@ -18,12 +18,12 @@ This document outlines the specific implementation tasks for building the MVP of
 ## Phase 1: Core Agent Development (v0 - OpenAI)
 
 ### Agent Core (OpenAI)
-- [ ] Implement the base agent in `agent.py` using Pydantic AI.
-- [ ] Configure LLM integration with OpenAI for text generation (`LLM_PROVIDER=openai`).
-- [ ] Configure embedding integration with OpenAI for embedding generation (`EMBEDDING_PROVIDER=openai`).
-- [ ] Create initial prompt templates in `prompt.py`.
-- [ ] Implement basic conversation history management.
-- [ ] Write unit tests for core agent functionality.
+- [x] Implement the base agent in `agent.py` using Pydantic AI.
+- [x] Configure LLM integration with OpenAI for text generation (`LLM_PROVIDER=openai`).
+- [x] Configure embedding integration with OpenAI for embedding generation (`EMBEDDING_PROVIDER=openai`).
+- [x] Create initial prompt templates in `prompt.py`.
+- [x] Implement basic conversation history management.
+- [x] Write unit tests for core agent functionality.
 
 ### Memory System
 - [ ] Implement short-term conversation memory.
