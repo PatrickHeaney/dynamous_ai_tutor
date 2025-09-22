@@ -19,7 +19,7 @@ Initially, the agent will leverage OpenAI for text and embedding generation. A s
 ## Project Structure
 
 ```
-dynomous_ai_agent/
+dynamous_ai_tutor/
 ├── .env.example               # Example environment variables
 ├── requirements.txt           # Project dependencies
 ├── README.md                  # This project documentation
@@ -67,7 +67,7 @@ dynomous_ai_agent/
 1.  **Clone the repository:**
     ```bash
     git clone <repository_url>
-    cd dynomous_ai_agent
+    cd dynamous_ai_tutor
     ```
 
 2.  **Create and activate virtual environment and install dependencies:**

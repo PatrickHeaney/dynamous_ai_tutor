@@ -132,7 +132,7 @@ SEARXNG_BASE_URL=
 ## File Structure
 
 ```
-dynomous_ai_agent/
+dynamous_ai_tutor/
 ├── .env.example               # Example environment variables
 ├── requirements.txt           # Project dependencies
 ├── README.md                  # Project documentation
