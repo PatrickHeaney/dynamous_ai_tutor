@@ -38,15 +38,7 @@ This document outlines the specific implementation tasks for building the MVP of
 ### Agent Tools
 - [ ] **Web Search Tool:**
     - [ ] Implement web search functionality using Brave API.
-    - [ ] Implement web search functionality using SearXNG.
-    - [ ] Add logic to select between Brave and SearXNG based on `.env` configuration.
     - [ ] Write unit tests for web search tools.
-- [ ] **Code Execution Tool:**
-    - [ ] Integrate a code execution tool (e.g., using Deno/MCP server).
-    - [ ] Write unit tests for the code execution tool.
-- [ ] **Image Analysis Tool:**
-    - [ ] Implement image analysis using a vision-capable LLM (e.g., OpenAI's vision models).
-    - [ ] Write unit tests for the image analysis tool.
 - [ ] **Document Tools:**
     - [ ] Implement a tool to list available documents from the RAG pipeline.
     - [ ] Implement a tool to retrieve content of specific documents.
@@ -114,6 +106,16 @@ This document outlines the specific implementation tasks for building the MVP of
 - [ ] Implement end-to-end tests for the Streamlit UI and agent flow.
 
 ## Future Enhancements
+
+### More Tools
+- [ ] Implement web search functionality using SearXNG.
+- [ ] Add logic to select between Brave and SearXNG based on `.env` configuration.
+- [ ] **Code Execution Tool:**
+    - [ ] Integrate a code execution tool (e.g., using Deno/MCP server).
+    - [ ] Write unit tests for the code execution tool.
+- [ ] **Image Analysis Tool:**
+    - [ ] Implement image analysis using a vision-capable LLM (e.g., OpenAI's vision models).
+    - [ ] Write unit tests for the image analysis tool.
 
 ### Advanced RAG
 - [ ] **Crawl4AI RAG Server Integration:** Integrate a Crawl4AI RAG Server for processing and storing helpful website content, creating a new RAG pipeline component for web crawling.
