@@ -79,7 +79,12 @@ This document outlines the specific implementation tasks for building the MVP of
 - [ ] Adjust vector dimensions in Supabase SQL scripts if the Ollama embedding model requires it.
 - [ ] Verify agent functionality with local Ollama models.
 
-## Phase 4: Basic User Interface
+### Terminal User Interface (v0)
+- [ ] Create `cli_ui.py` for terminal interaction.
+- [ ] Implement basic input/output for agent interaction.
+- [ ] Display conversation history in the terminal.
+
+## Phase 4: Basic Streamlit User Interface (v1)
 
 ### Streamlit UI
 - [ ] Create the basic chat interface in `streamlit_ui.py`.

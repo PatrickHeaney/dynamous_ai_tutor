@@ -10,7 +10,7 @@ Our system will consist of the following components:
 
 ```
                     +----------------+
-                    | Streamlit UI   |
+                    |  Terminal UI   |
                     +--------+-------+
                              |
                     +--------v-------+
@@ -58,8 +58,9 @@ Our system will consist of the following components:
     *   Code execution.
     *   SQL query generation and execution (for interacting with the document store).
 
-6.  **Basic User Interface**
-    *   Streamlit-based chat interface for interaction.
+6.  **User Interface**
+    *   **v0:** Simple terminal-based chat interface for initial interaction.
+    *   **v1:** Streamlit-based chat interface for a more user-friendly experience.
     *   Session management.
 
 ## Development Phases
@@ -79,10 +80,13 @@ The project is organized into several development phases:
 ### Phase 4: Agent Tools
 *   Develop various tools for the agent, including web search (Brave/SearXNG), image analysis, and code execution.
 
-### Phase 5: Basic User Interface
+### Phase 5: Terminal User Interface (v0)
+*   Build a simple command-line interface for interacting with the agent.
+
+### Phase 6: Basic Streamlit User Interface (v1)
 *   Build a simple Streamlit interface for interacting with the agent.
 
-### Phase 6: Transition to Local Ollama (v1)
+### Phase 7: Transition to Local Ollama (v1)
 *   Migrate LLM and embedding generation to a local Ollama instance, configuring for a more advanced local model.
 
 ## Environment Configuration

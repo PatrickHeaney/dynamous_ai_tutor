@@ -14,7 +14,7 @@ Initially, the agent will leverage OpenAI for text and embedding generation. A s
 -   **Image Analysis**: Analyze images with vision-capable LLMs.
 -   **Code Execution**: Generate and run Python code safely.
 -   **Multi-LLM Support**: Works with OpenAI (v0) and local Ollama models (v1).
--   **Streamlit UI**: Simple chat interface for interacting with the agent.
+-   **User Interfaces**: Interact via a simple terminal UI (v0) or a Streamlit UI (v1).
 
 ## Project Structure
 
@@ -158,9 +158,20 @@ Activate the `venv_rag` virtual environment and run the desired pipeline:
 
 ### Running the Agent
 
-1.  Activate the `venv_agent` virtual environment:
+#### v0: Terminal UI
+1.  Activate the virtual environment:
     ```bash
-    source venv_agent/bin/activate
+    source .venv/bin/activate
+    ```
+2.  Run the terminal UI:
+    ```bash
+    python cli_ui.py
+    ```
+
+#### v1: Streamlit UI
+1.  Activate the virtual environment:
+    ```bash
+    source .venv/bin/activate
     ```
 2.  Run the Streamlit UI:
     ```bash

@@ -1,3 +1,9 @@
+Updates
+9/22/2025
+ - posted issue to https://github.com/mem0ai/mem0/issues/3493
+ - posted iso help to https://community.dynamous.ai/c/ai-mastery-course/
+ - created new open source repository for where I encountered the ModuleNotFoundError, https://github.com/PatrickHeaney/dynamous_ai_tutor
+
 I'm working on a project using Python 3.13.7 on macOS, managing my virtual environment and packages with uv. I'm encountering a very stubborn
   ModuleNotFoundError: No module named 'mem0ai' when trying to import the mem0ai library, both within my project's modules (e.g., memory.py) and directly from
   the Python interpreter within the activated virtual environment. This issue prevents me from running any unit tests that depend on mem0ai.
