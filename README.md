@@ -70,24 +70,12 @@ dynomous_ai_agent/
     cd dynomous_ai_agent
     ```
 
-2.  **Create and activate virtual environments:**
-
-    For the agent:
+2.  **Create and activate virtual environment and install dependencies:**
     ```bash
-    python -m venv venv_agent
-    source venv_agent/bin/activate # On macOS/Linux
-    # venv_agent\Scripts\activate # On Windows
-    pip install -r requirements.txt
-    ```
-
-    For the RAG pipelines (from the `dynomous_ai_agent` directory):
-    ```bash
-    cd RAG_Pipeline
-    python -m venv venv_rag
-    source venv_rag/bin/activate # On macOS/Linux
-    # venv_rag\Scripts\activate # On Windows
-    pip install -r requirements.txt
-    cd ..
+    uv venv
+    source .venv/bin/activate # On macOS/Linux
+    # .venv\Scripts\activate # On Windows
+    uv pip install -r requirements.txt
     ```
 
 3.  **Create and configure `.env` file:**

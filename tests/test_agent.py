@@ -4,6 +4,12 @@ Unit tests for the Dynomous AI agent.
 import unittest
 from unittest.mock import patch, MagicMock
 import os
+import sys
+from pathlib import Path
+
+# Add project root to sys.path for module discovery
+path_to_project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(path_to_project_root))
 
 # Set dummy environment variables for testing
 os.environ["LLM_PROVIDER"] = "openai"
@@ -11,6 +17,7 @@ os.environ["LLM_API_KEY"] = "test_api_key"
 
 from prompts import SYSTEM_PROMPT
 from memory import MemoryManager
+from agent import DynomousAgent
 
 class TestDynomousAgent(unittest.TestCase):
     """

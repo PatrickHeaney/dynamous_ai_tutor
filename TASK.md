@@ -32,8 +32,7 @@ This document outlines the specific implementation tasks for building the MVP of
 - [x] Create memory vector storage in Supabase.
 - [x] Implement memory retrieval system.
 - [x] Add memory deduplication mechanism.
-- [x] Write unit tests for the memory system.
-- [ ] Execute unit tests for the memory system. (Blocked by environment issue)
+- [ ] Write unit tests for the memory system.
 - [ ] Execute unit tests for the memory system.
 
 ### Agent Tools

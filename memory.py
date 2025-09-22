@@ -4,6 +4,10 @@ This module handles the memory system for the Dynomous AI Tutor.
 
 from mem0ai import Mem0
 from typing import List, Dict
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class MemoryManager:
     """
@@ -17,7 +21,14 @@ class MemoryManager:
             user_id (str): The ID of the user.
         """
         self.user_id = user_id
-        self.memory = Mem0()
+        # Initialize Mem0 with Supabase configuration
+        self.memory = Mem0(
+            vector_store_config={
+                "provider": "supabase",
+                "url": os.getenv("SUPABASE_URL"),
+                "anon_key": os.getenv("SUPABASE_ANON_KEY"),
+            }
+        )
 
     def add_message(self, role: str, content: str):
         """

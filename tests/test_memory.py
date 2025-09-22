@@ -3,6 +3,12 @@ Unit tests for the memory manager.
 """
 import unittest
 from unittest.mock import patch, MagicMock
+import sys
+from pathlib import Path
+
+# Add project root to sys.path for module discovery
+path_to_project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(path_to_project_root))
 
 from memory import MemoryManager
 
