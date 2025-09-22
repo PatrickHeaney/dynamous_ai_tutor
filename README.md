@@ -127,7 +127,7 @@ dynamous_ai_tutor/
 
 ### Database Setup
 
-1. ✅ **Create a Supabase project** at [https://supabase.com](https://supabase.com) (or use a self-hosted instance).
+1.  **Create a Supabase project** at [https://supabase.com](https://supabase.com) (or use a self-hosted instance).
 2.  **Navigate to the SQL Editor** in your Supabase dashboard.
 3.  **Run the necessary SQL scripts** to create tables for RAG (documents, document_metadata, document_rows) and long-term memory (e.g., user_profiles, conversations, messages). Also, create the RPC function for secure SQL queries.
     *   *Note:* I will switch to a local embedding model later.  I'm starting with openai first. When using a local Ollama embedding model with different dimensions (e.g., 768 instead of 1536), remember to adjust the vector dimensions in the SQL scripts before running them.
