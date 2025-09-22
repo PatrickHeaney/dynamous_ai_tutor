@@ -2,3 +2,6 @@ pydantic-ai
 python-dotenv
 openai
 mem0ai
+pytest
+requests
+supabase

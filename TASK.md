@@ -36,14 +36,14 @@ This document outlines the specific implementation tasks for building the MVP of
 - [ ] Execute unit tests for the memory system.
 
 ### Agent Tools
-- [ ] **Web Search Tool:**
-    - [ ] Implement web search functionality using Brave API.
-    - [ ] Write unit tests for web search tools.
-- [ ] **Document Tools:**
-    - [ ] Implement a tool to list available documents from the RAG pipeline.
-    - [ ] Implement a tool to retrieve content of specific documents.
-    - [ ] Implement a tool to execute read-only SQL queries against tabular data in Supabase.
-    - [ ] Write unit tests for document tools.
+- [x] **Web Search Tool:**
+    - [x] Implement web search functionality using Brave API.
+    - [x] Write unit tests for web search tools.
+- [x] **Document Tools:**
+    - [x] Implement a tool to list available documents from the RAG pipeline.
+    - [x] Implement a tool to retrieve content of specific documents.
+    - [x] Implement a tool to execute read-only SQL queries against tabular data in Supabase.
+    - [x] Write unit tests for document tools.
 
 ## Phase 2: Local RAG Pipeline for Tutor Content
 
