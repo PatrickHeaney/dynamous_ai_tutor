@@ -17,7 +17,7 @@ class TestDynomousAgent(unittest.TestCase):
     Tests for the DynomousAgent class.
     """
 
-    @patch('agent.PydanticAI')
+    @patch('agent.Agent')
     @patch('agent.OpenAI')
     def test_initialization(self, mock_openai, mock_pydantic_ai):
         """
@@ -56,7 +56,7 @@ class TestDynomousAgent(unittest.TestCase):
         if original_api_key is not None:
             os.environ["LLM_API_KEY"] = original_api_key
 
-    @patch('agent.PydanticAI')
+    @patch('agent.Agent')
     @patch('agent.OpenAI')
     def test_invoke(self, mock_openai, mock_pydantic_ai):
         """

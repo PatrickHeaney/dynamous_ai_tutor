@@ -2,7 +2,7 @@
 This module defines the core AI agent for the Dynomous AI Tutor.
 """
 import os
-from pydantic_ai import PydanticAI
+from pydantic_ai import Agent
 from openai import OpenAI
 from dotenv import load_dotenv
 from prompts import SYSTEM_PROMPT
@@ -50,7 +50,7 @@ class DynomousAgent:
             An instance of the PydanticAI agent.
         """
         # In the future, we will add tools and memory here
-        return PydanticAI(
+        return Agent(
             llm=self.llm,
             system_prompt=SYSTEM_PROMPT,
             # memory=... 
@@ -70,7 +70,7 @@ class DynomousAgent:
         self.conversation_history.append({"role": "user", "content": query})
         
         # For now, we pass the history manually. Later, this will be handled by a memory system.
-        response = self.agent.run(input=self.conversation_history)
+        response = self.agent.run(input=list(self.conversation_history))
         
         self.conversation_history.append({"role": "assistant", "content": response})
         return response
