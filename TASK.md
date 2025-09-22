@@ -24,14 +24,17 @@ This document outlines the specific implementation tasks for building the MVP of
 - [x] Create initial prompt templates in `prompt.py`.
 - [x] Implement basic conversation history management.
 - [x] Write unit tests for core agent functionality.
+- [x] Execute unit tests for core agent functionality.
 
 ### Memory System
-- [ ] Implement short-term conversation memory.
-- [ ] Implement memory extraction from conversations.
-- [ ] Create memory vector storage in Supabase.
-- [ ] Implement memory retrieval system.
-- [ ] Add memory deduplication mechanism.
-- [ ] Write unit tests for the memory system.
+- [x] Implement short-term conversation memory.
+- [x] Implement memory extraction from conversations.
+- [x] Create memory vector storage in Supabase.
+- [x] Implement memory retrieval system.
+- [x] Add memory deduplication mechanism.
+- [x] Write unit tests for the memory system.
+- [ ] Execute unit tests for the memory system. (Blocked by environment issue)
+- [ ] Execute unit tests for the memory system.
 
 ### Agent Tools
 - [ ] **Web Search Tool:**

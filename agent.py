@@ -6,6 +6,7 @@ from pydantic_ai import Agent
 from openai import OpenAI
 from dotenv import load_dotenv
 from prompts import SYSTEM_PROMPT
+from memory import MemoryManager
 
 # Load environment variables from .env file
 load_dotenv()
@@ -14,12 +15,12 @@ class DynomousAgent:
     """
     The main class for the Dynomous AI Tutor agent.
     """
-    def __init__(self):
+    def __init__(self, user_id: str = "default_user"):
         """
         Initializes the DynomousAgent.
         """
         self.llm = self._initialize_llm()
-        self.conversation_history = []
+        self.memory = MemoryManager(user_id=user_id)
         self.agent = self._create_agent()
 
     def _initialize_llm(self):
@@ -49,7 +50,7 @@ class DynomousAgent:
         Returns:
             An instance of the PydanticAI agent.
         """
-        # In the future, we will add tools and memory here
+        # In the future, we will add tools here
         return Agent(
             llm=self.llm,
             system_prompt=SYSTEM_PROMPT,
@@ -67,17 +68,27 @@ class DynomousAgent:
         Returns:
             str: The agent's response.
         """
-        self.conversation_history.append({"role": "user", "content": query})
+        self.memory.add_message(role="user", content=query)
         
-        # For now, we pass the history manually. Later, this will be handled by a memory system.
-        response = self.agent.run(input=list(self.conversation_history))
+        # Retrieve conversation history and relevant memories
+        history = self.memory.get_history()
+        relevant_memories = self.memory.search(query)
         
-        self.conversation_history.append({"role": "assistant", "content": response})
+        # Combine history and memories for context
+        context = "\n".join([m['content'] for m in relevant_memories])
+        
+        # For now, we prepend the context to the query.
+        # A more sophisticated approach would be to format this into the prompt.
+        enriched_query = f"Relevant context:\n{context}\n\nUser query: {query}"
+
+        response = self.agent.run(input=history + [{ "role": "user", "content": enriched_query }])
+        
+        self.memory.add_message(role="assistant", content=response)
         return response
 
 if __name__ == "__main__":
     # A simple example of how to use the agent
-    agent = DynomousAgent()
+    agent = DynomousAgent(user_id="cli_user")
     print("Dynomous: Hello! I'm Dynomous, your AI programming tutor. How can I help you today?")
     
     while True:
