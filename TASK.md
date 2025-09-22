@@ -13,7 +13,7 @@ This document outlines the specific implementation tasks for building the MVP of
 - [x] Set up a Supabase project (cloud or local).
 - [x] Run SQL scripts to create tables for RAG (documents, document_metadata, document_rows).
 - [x] Run SQL scripts to create tables for long-term memory (e.g., user_profiles, conversations, messages).
-- [ ] Run SQL script to create RPC function for secure SQL queries.
+- [x] Run SQL script to create RPC function for secure SQL queries.
 
 ## Phase 1: Core Agent Development (v0 - OpenAI)
 
