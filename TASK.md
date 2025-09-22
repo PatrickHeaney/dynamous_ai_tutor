@@ -5,9 +5,9 @@ This document outlines the specific implementation tasks for building the MVP of
 ## Phase 0: Project Setup & Foundation
 
 ### Project Initialization
-- [ ] Create the `dynomous_ai_agent` directory and initial file structure.
-- [ ] Create `requirements.txt` and add initial dependencies (Pydantic AI, FastAPI, Streamlit, Supabase client, etc.).
-- [ ] Create `.env.example` with placeholders for LLM, embedding, Supabase, and web search configurations.
+- [x] Create the `dynomous_ai_agent` directory and initial file structure.
+- [x] Create `requirements.txt` and add initial dependencies (Pydantic AI, FastAPI, Streamlit, Supabase client, etc.).
+- [x] Create `.env.example` with placeholders for LLM, embedding, Supabase, and web search configurations.
 
 ### Supabase Database Setup
 - [ ] Set up a Supabase project (cloud or local).
