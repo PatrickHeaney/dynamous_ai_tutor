@@ -80,9 +80,9 @@ This document outlines the specific implementation tasks for building the MVP of
 - [ ] Verify agent functionality with local Ollama models.
 
 ### Terminal User Interface (v0)
-- [ ] Create `cli_ui.py` for terminal interaction.
-- [ ] Implement basic input/output for agent interaction.
-- [ ] Display conversation history in the terminal.
+- [x] Create `cli_ui.py` for terminal interaction.
+- [x] Implement basic input/output for agent interaction.
+- [x] Display conversation history in the terminal.
 
 ## Phase 4: Basic Streamlit User Interface (v1)
 
