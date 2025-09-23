@@ -17,7 +17,7 @@ class TestMemoryManager(unittest.TestCase):
     Tests for the MemoryManager class.
     """
 
-    @patch('memory.Mem0')
+    @patch('memory.Memory')
     def test_add_message(self, mock_mem0):
         """
         Test that a message is added to the memory.
@@ -33,7 +33,7 @@ class TestMemoryManager(unittest.TestCase):
         # Assert
         mock_mem0_instance.add.assert_called_once_with("Hello", user_id="test_user", role="user")
 
-    @patch('memory.Mem0')
+    @patch('memory.Memory')
     def test_get_history(self, mock_mem0):
         """
         Test that the conversation history is retrieved correctly.
@@ -56,7 +56,7 @@ class TestMemoryManager(unittest.TestCase):
         self.assertEqual(history[1], {"role": "assistant", "content": "Hi there!"})
         mock_mem0_instance.get_all.assert_called_once_with(user_id="test_user")
 
-    @patch('memory.Mem0')
+    @patch('memory.Memory')
     def test_search(self, mock_mem0):
         """
         Test that the memory search functionality works.
