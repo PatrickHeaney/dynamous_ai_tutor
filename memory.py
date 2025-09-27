@@ -23,10 +23,27 @@ class MemoryManager:
         self.user_id = user_id
         # Initialize Mem0 with Supabase configuration
         self.memory = Memory(
-            vector_store_config={
-                "provider": "supabase",
-                "url": os.getenv("SUPABASE_URL"),
-                "anon_key": os.getenv("SUPABASE_ANON_KEY"),
+            config={
+                "vector_store": {
+                    "provider": "supabase",
+                    "config": {
+                        "url": os.getenv("SUPABASE_URL"),
+                        "key": os.getenv("SUPABASE_KEY"),
+                    }
+                },
+                "llm": {
+                    "provider": os.getenv("LLM_PROVIDER"),
+                    "config": {
+                        "api_key": os.getenv("OPENAI_API_KEY"),
+                    }
+                },
+                "embedder": {
+                    "provider": os.getenv("EMBEDDING_PROVIDER"),
+                    "config": {
+                        "api_key": os.getenv("OPENAI_EMBEDDING_API_KEY"),
+                    }
+                },
+                "custom_fact_extraction_prompt": None,
             }
         )
 

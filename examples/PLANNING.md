@@ -45,6 +45,7 @@ Our system will consist of the following components (more complex UI with React 
    - Short-term conversation memory
    - Long-term memory extraction and storage
    - Memory deduplication mechanism
+   - use `from mem0 import Memory' instead of mem0ai
 
 4. **AI Agent**
    - LLM integration (with both local and cloud options)
