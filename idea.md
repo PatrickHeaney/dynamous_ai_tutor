@@ -8,28 +8,28 @@ My intent is to create branch for each Increment then others can use this as a l
 
 I can then go back and merge changes from previous Increments into the main branch and have a robust new starting point for future Increments.
 
-### Increment 1: [] The Core Conversation Loop
+### [] Increment 1: The Core Conversation Loop
 *   **Goal**: Create the simplest possible, runnable agent.
 *   **Functionality**: A user can start the terminal UI, have a basic conversation with the agent (no tools, no memory), and the agent will respond using the LLM.
 *   **Testing**: Unit and user tests for agent/UI initialization to to validate.
 
-### Increment 2: [] Adding Memory
+### [] Increment 2: Adding Memory
 *   **Goal**: Make the agent stateful and conversational.
 *   **Functionality**: The agent can remember information from earlier in the same conversation **and recall it in subsequent conversations after an application restart.**
 *   **Testing**:
   * Unit tests for the `mem0` integration points. User testing by asking the agent to recall previously mentioned facts.
   * Integration tests for the `mem0` integration points. User testing by asking the agent to recall previously mentioned facts.
 
-### Increment 3: [] Adding Web Search
+### [] Increment 3: Adding Web Search
 *   **Goal**: Give the agent its first tool to access external knowledge.
 *   **Functionality**: The agent can answer questions about recent events or topics outside its training data.
 *   **Testing**: Unit tests for the web search tool. User testing to confirm the agent uses the tool correctly.
 
-### Increment 4: [] Adding RAG
+### [] Increment 4: Adding RAG
 
-### Increment 5: [] Adding MCP Servers
+### [] Increment 5: Adding MCP Servers
 
-### Increment 6: [] Adding Crawl4AI 
+### [] Increment 6: Adding Crawl4AI
 
 My list of Local MCP Servers includes
 [] Brave Search - `https://github.com/brave/brave-search-mcp-server`

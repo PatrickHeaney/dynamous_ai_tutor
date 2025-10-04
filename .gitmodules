@@ -1,0 +1,3 @@
+[submodule "example_code/ai-agent-mastery"]
+	path = example_code/ai-agent-mastery
+	url = https://github.com/dynamous-community/ai-agent-mastery.git
