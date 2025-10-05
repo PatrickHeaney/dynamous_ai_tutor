@@ -19,7 +19,7 @@ Create your new branch and switch to it
   [] `Read @idea.md then read and modify the @PLANNING.md document to align with my Increment 1: The Core Conversation Loop of @idea.md . Explain your modifications.`
 
   ### 3. TASK.md
-  [] `Read @idea.md and @PLANNING.md then read and modify @TASK.md document to align with my Increment 1: The Core Conversation Loop of @idea.md and with @PLANNING.md . Explain your modifications.`
+  [] `Read @idea.md , @.env.example , and @PLANNING.md then read and modify @TASK.md document to align with my Increment 1: The Core Conversation Loop of @idea.md and with @PLANNING.md . Explain your modifications.`
 
   ### 4. README.md
   [] `Read @idea.md , @PLANNING.md , and @TASK.md files, then read and update the @README.md document to align with to align with my Increment 1: The Core Conversation Loop of @idea.md and with @PLANNING.md and @TASK.md . Explain your modifications.`

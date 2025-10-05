@@ -2,7 +2,7 @@
 
 ## Setup & Configuration
 - [x] Initialize project structure
-- [X] Create README.md with project overview and installation instructions
+- [X] Update README.md with project overview and installation instructions
 - [x] Set up virtual environment and dependency management
 - [x] Create .env.example file with environment variable templates
 - [X] Add .gitignore for Python projects
