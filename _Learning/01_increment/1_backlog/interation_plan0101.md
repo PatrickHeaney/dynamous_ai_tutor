@@ -16,7 +16,7 @@ Create your new branch and switch to it
 ## Plan
 
   ### 2. PLANNING.md
-  [] `Read @idea.md then read and modify the @PLANNING.md document to align with my Increment 1: The Core Conversation Loop of @idea.md . Explain your modifications.`
+  [] `Read @idea.md and @env.example then read and modify the @PLANNING.md document to align with my Increment 1: The Core Conversation Loop of @idea.md . Explain your modifications.`
 
   ### 3. TASK.md
   [] `Read @idea.md , @.env.example , and @PLANNING.md then read and modify @TASK.md document to align with my Increment 1: The Core Conversation Loop of @idea.md and with @PLANNING.md . Explain your modifications.`
@@ -26,7 +26,7 @@ Create your new branch and switch to it
 
 ## Implement
 
-### 1. Implement Increment 2
+### 1. Implement Increment 1
 [] Create a Pydantic AI Agent implementing Iteration 1 of @TASK.md while adhere to the following guidelines:
   - follow agent examples from https://ai.pydantic.dev/examples/weather-agent/ and /Users/pmh/code/_new_prj/example_code/ai-agent-mastery/4_Pydantic_AI_Agent/extras/Basic_Pydantic_AI_Agent. Don't follow them to a tea, just use them to get a grasp of and use the Pydantic framework.
   - use .env.example to get an understanding of the necessary environment variables for the agent

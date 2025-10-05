@@ -1,72 +1,48 @@
-# Pydantic AI Web Search Agent - Project Planning
+# Increment 1: The Core Conversation Loop - Project Planning
 
 ## Project Overview
-This project aims to build a Pydantic AI agent capable of searching the web using either Brave Search API or SearXNG, depending on environment configuration. The agent will be versatile, allowing for seamless switching between search providers while maintaining consistent functionality and response structure.
+This project aims to build the simplest possible, runnable AI agent. The goal is to establish a core conversation loop where a user can interact with the agent through a terminal interface. The agent will respond using an LLM, without any tools or long-term memory. This increment serves as the foundational baseline for future development.
 
 ## Architecture
 
 ### Components
-1. **Agent Core (agent.py)**
-   - Main Pydantic AI agent implementation
-   - Handles system prompt and tool integration
-   - Manages environment-based configuration
-
-2. **Search Tools (tools.py)**
-   - Brave Search implementation
-   - SearXNG implementation
-   - Common interface for both search providers
-
-3. **System prompt (prompt.py)**
-   - Main prompt for the AI agent
+1.  **Agent Core (agent.py)**
+    *   Basic agent implementation using a core AI framework.
+    *   Handles communication with the LLM.
+    *   Reads environment variables (LLM_BASE_URL, LLM_API_KEY, LLM_CHOICE) to dynamically configure the LLM client.
+2.  **Terminal UI (cli.py)**
+    *   A simple command-line interface for users to interact with the agent.
+    *   Manages the conversation loop (input -> agent -> output).
+3.  **System Prompt (prompt.py)**
+    *   A minimal system prompt to define the agent's basic persona (e.g., "You are a helpful assistant.").
 
 ### Tech Stack
-- **Pydantic AI**: Core agent framework
-- **Python 3.10+**: Base language
-- **httpx**: For async HTTP calls
-- **python-dotenv**: For environment variable management
-- **pytest**: For unit testing
-
-## Search Provider Integration
-
-### Brave Search
-- **API Endpoint**: https://api.search.brave.com/res/v1/web/search
-- **Authentication**: API key via `X-Subscription-Token` header
-- **Query Parameters**: q (query), count (results), country, etc.
-- **Key Features**: Web search, news, videos, images
-- **Configuration**: BRAVE_API_KEY environment variable
-
-### SearXNG
-- **API Endpoint**: Self-hosted or public instance (via SEARXNG_BASE_URL)
-- **Authentication**: None required (for most instances)
-- **Query Parameters**: q (query), categories, engines, etc.
-- **Key Features**: Metasearch capabilities, privacy-focused
-- **Configuration**: SEARXNG_BASE_URL environment variable
+- **Pydantic AI**: Core agent framework (or similar).
+- **Python 3.10+**: Base language.
+- **python-dotenv**: For environment variable management (e.g., API keys).
+- **pytest**: For unit testing.
+- **Rich/Typer**: For an improved terminal UI experience (optional but recommended).
 
 ## System Prompt Strategy
-The agent will use a dynamic system prompt that:
-1. Explains its capability to search the web
-2. Indicates which search provider is being used
-3. Provides relevant disclaimers about search results
-4. Includes instructions on how to format and present search results
+The agent will use a static, basic system prompt that instructs the LLM to act as a general-purpose helpful assistant. The focus is on establishing the communication channel, not on complex persona or tool usage instructions.
 
 ## Agent Functionality
 
 ### Primary Features
-- Web search with query customization
-- Configurable number of results
-- Consistent response formatting
-- Error handling and rate limit management
-- Automatic provider selection based on environment
+-   Start a session from the terminal.
+-   Accept multi-line user input.
+-   Send the input to the LLM via the agent.
+-   Stream the LLM's response back to the terminal.
+-   Exit the session gracefully.
+-   Configurable LLM provider (e.g., OpenAI, Ollama) via environment variables.
 
 ### Agent Input/Output Structure
-- **Input**: Natural language queries
-- **Output**: Structured search results with:
-  - Title
-  - URL
-  - Snippet/description
-  - Source attribution
+-   **Input**: Natural language text from the user's terminal input.
+-   **Output**: Natural language text streamed from the LLM to the user's terminal.
 
 ## Testing Strategy
-- Test each agent tool for web search
-- Mock responses for reliable testing
-- Error condition testing
+-   **Unit Tests**:
+    -   Verify that the agent can be initialized correctly.
+    -   Test the creation of the terminal UI.
+-   **Integration Tests**:
+    -   A simple test to ensure the agent can receive a message and produce a non-empty response from a mocked LLM.

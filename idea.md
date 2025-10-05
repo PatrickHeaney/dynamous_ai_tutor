@@ -9,7 +9,7 @@ My intent is to create branch for each Increment then others can use this as a l
 I can then go back and merge changes from previous Increments into the main branch and have a robust new starting point for future Increments.
 
 ### [] Increment 1: The Core Conversation Loop
-*   **Goal**: Create the simplest possible, runnable agent.
+*   **Goal**: Create the simplest possible, runnable Agentic AI agent, following examples from https://ai.pydantic.dev/examples/weather-agent/ and /Users/pmh/code/_new_prj/example_code/ai-agent-mastery/4_Pydantic_AI_Agent/extras/Basic_Pydantic_AI_Agent..
 *   **Functionality**: A user can start the terminal UI, have a basic conversation with the agent (no tools, no memory), and the agent will respond using the LLM.
 *   **Testing**: Unit and user tests for agent/UI initialization to to validate.
 
