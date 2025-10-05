@@ -29,6 +29,7 @@
 ### 📎 Style & Conventions
 - **Use Python** as the primary language. Use uv to install, manage dependencies, and run the application.
 - **Follow PEP8**, use type hints, and format with `black`.
+- **Use `rich` for rich text output**.
 - **Use `pydantic` for data validation**.
 - Write **docstrings for every function** using the Google style:
   ```python

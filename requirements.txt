@@ -1,0 +1,4 @@
+pydantic-ai
+python-dotenv
+rich
+pytest
