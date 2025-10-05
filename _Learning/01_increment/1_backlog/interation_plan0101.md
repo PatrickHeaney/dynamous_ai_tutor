@@ -1,7 +1,7 @@
 # Increment 1: Core Conversation Loop
 ## Coding Agent: Gemini 2.5 Pro
 
-## Setup the system prompt for the AI Coding Agent
+## Setup/Confirm the system prompt for the AI Coding Agent
 see examples/ai-agent-mastery/GOLDEN_RULES.md.  (For me this was creating a GEMINI.md file with the content of the golden rules. I just added "Use uv to install, manage dependencies, and run the application.")
 
 ## Create a New Branch
