@@ -50,21 +50,27 @@
 ### Overview
 This increment provides the simplest possible, runnable AI agent. It establishes a core conversation loop within a terminal interface, allowing a user to have a basic, stateless conversation with a configurable LLM.
 
-### Setup and Installation (using uv)
+### Setup and Installation
 
-1.  **Install uv:**
-    If you don't have `uv` installed, you can install it with pip:
+1.  **Install `uv` (if not already installed):**
+    `uv` is a fast Python package and environment manager.
     ```bash
-    pip install uv
+    curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
 
-2.  **Create Virtual Environment & Install Dependencies:**
-    From the project's root directory, run `uv sync`. This will create a virtual environment and install all required packages from `requirements.txt`.
+2.  **Create Virtual Environment:**
+    This command creates a virtual environment in a `.venv` directory.
+    ```bash
+    uv venv
+    ```
+
+3.  **Install Dependencies:**
+    This command installs all required packages from `pyproject.toml` into the virtual environment.
     ```bash
     uv sync
     ```
 
-3.  **Configure your Environment:**
+4.  **Configure your Environment:**
     -   Copy the example environment file:
         ```bash
         cp .env.example .env
@@ -84,10 +90,14 @@ This increment provides the simplest possible, runnable AI agent. It establishes
             ```
 
 ### How to Run
-Once the setup is complete, run the agent from your terminal using `uv run`:
-
+Once the setup is complete, run the agent from your terminal. The application entry point is `src/cli.py`.
 ```bash
-uv run python cli.py
+uv run python -m src.cli
 ```
-
 This will start the conversational agent. To exit, press `Ctrl+C`.
+
+### How to Test
+To run the automated tests, use the following command:
+```bash
+uv run pytest
+```
